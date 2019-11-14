@@ -4,14 +4,17 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Body from "./Components/Body";
 import Footer from "./Components/Footer";
-import Nav from "./Components/Header/Nav"
+import Nav from "./Components/Header/Nav";
 
 import "typeface-roboto";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
 import MetaTags from "react-meta-tags";
+import styled from "styled-components";
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 function App() {
   return (
@@ -30,17 +33,12 @@ function App() {
         />
       </MetaTags>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Typography
-          component="div"
-          style={{ backgroundColor: "black", height: "100%" }}
-        >
-          <Nav/>
-          <Header />
-          <Body />
-          <Footer />
-        </Typography>
-      </Container>
+      <Nav />
+      <Wrapper>
+        <Header />
+        <Body />
+        <Footer />
+      </Wrapper>
     </div>
   );
 }

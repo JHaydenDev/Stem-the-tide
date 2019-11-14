@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   background-color: rgba(0, 22, 46, 0.5);
   display: flex;
-  height: 400px;
+  min-height: 400px;
 `;
 const BodyBox = styled.div`
   display: flex;

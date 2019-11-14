@@ -5,7 +5,12 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 
 const Wrapper = styled.div`
   display: flex;
-  height: 250px;
+  height: auto;
+  @media screen and (max-width: 500px) {
+    div {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 const FooterBox = styled.div`
   background-color: rgba(0, 22, 46, 0.5);
@@ -18,6 +23,7 @@ const FooterBox = styled.div`
     align-items: center;
     width: 45%;
   }
+  
 `;
 
 const SocialMediaBox = styled.div`
