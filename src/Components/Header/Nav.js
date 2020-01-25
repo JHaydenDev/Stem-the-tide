@@ -19,6 +19,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import NotInterestedIcon from "@material-ui/icons/NotInterested";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 import HelpIcon from '@material-ui/icons/Help';
+import LineWeightIcon from '@material-ui/icons/LineWeight';
 
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -188,6 +189,15 @@ export default function MiniDrawer() {
               <ErrorOutlineIcon />
             </ListItemIcon>
             <ListItemText>Restricted</ListItemText>
+          </ListItem>
+          </StyledLink>
+
+          <StyledLink to="/cardimg">
+          <ListItem button>
+            <ListItemIcon>
+              <LineWeightIcon />
+            </ListItemIcon>
+            <ListItemText>Card Search</ListItemText>
           </ListItem>
           </StyledLink>
 
