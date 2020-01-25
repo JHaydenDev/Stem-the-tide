@@ -3,8 +3,9 @@
   background-color: rgb(39, 37, 37);
   color: white;
   display: flex;
-  min-width: 345px;
+  
 
+  align-items: center;
 }
 
 .App-header {

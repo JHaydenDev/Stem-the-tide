@@ -2,10 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
+import NB from "../Assets/General artwork/NB.jpg";
 
 const Wrapper = styled.div`
   display: flex;
   height: auto;
+  background-image: url("${NB}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
   @media screen and (max-width: 500px) {
     div {
         flex-direction: column;
@@ -16,9 +23,12 @@ const FooterBox = styled.div`
   background-color: rgba(0, 22, 46, 0.5);
   display: flex;
   flex-direction: row;
+  min-height:350px;
   width: 100%;
-  > div {
+  justify-content: center;
+  > section {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 45%;
@@ -52,13 +62,13 @@ function Footer() {
   return (
     <Wrapper>
       <FooterBox>
-        <div>
+        <section>
           <h2>Email us at:</h2>
           <address>
             <p>Example.com</p>
           </address>
-        </div>
-        <div>
+        </section>
+        <section>
           <h2>Or reach out to us on:</h2>
           <SocialMediaBox>
             <a href="#">
@@ -72,7 +82,7 @@ function Footer() {
               <div>Twitter</div>
             </a>
           </SocialMediaBox>
-        </div>
+        </section>
       </FooterBox>
     </Wrapper>
   );

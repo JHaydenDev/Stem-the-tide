@@ -2,11 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: rgba(0, 22, 46, 0.5);
   display: flex;
   min-height: 400px;
 `;
-const BodyBox = styled.div`
+const RulesBox = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -15,16 +14,16 @@ const BodyBox = styled.div`
     margin: auto;
   }
   > p {
-    margin:2% auto;
+    margin: 2% auto;
     width: 90%;
   }
 `;
 
-function Body() {
+function RulesPage() {
   return (
     <Wrapper>
-      <BodyBox>
-        <h1>This is the Body!</h1>
+      <RulesBox>
+        <h1>This is the Rules!</h1>
         <p>
           Lorem Ipsum is the single greatest threat. We are not - we are not
           keeping up with other websites. Lorem Ipsum best not make any more
@@ -42,9 +41,9 @@ function Body() {
           An ‘extremely credible source’ has called my office and told me that
           Barack Obama’s placeholder text is a fraud.
         </p>
-      </BodyBox>
+      </RulesBox>
     </Wrapper>
   );
 }
 
-export default Body;
+export default RulesPage;

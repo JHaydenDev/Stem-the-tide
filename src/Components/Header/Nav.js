@@ -17,7 +17,16 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 import HomeIcon from "@material-ui/icons/Home";
 import NotInterestedIcon from "@material-ui/icons/NotInterested";
-import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
+import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
+import HelpIcon from '@material-ui/icons/Help';
+
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+`;
 
 const drawerWidth = 240;
 
@@ -144,19 +153,44 @@ export default function MiniDrawer() {
             )}
           </IconButton>
         </div>
+
         <List>
+          <StyledLink to="/">
+            <ListItem button>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText>Home</ListItemText>
+            </ListItem>
+          </StyledLink>
+
+          <StyledLink to="/rules">
+            <ListItem button>
+              <ListItemIcon>
+                <HelpIcon />
+              </ListItemIcon>
+              <ListItemText>Rules</ListItemText>
+            </ListItem>
+          </StyledLink>
+
+          <StyledLink to="/banned">
           <ListItem button>
-            <ListItemIcon><HomeIcon /></ListItemIcon>
-            <ListItemText>Home</ListItemText>
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon><NotInterestedIcon /></ListItemIcon>
+            <ListItemIcon>
+              <NotInterestedIcon />
+            </ListItemIcon>
             <ListItemText>Banned</ListItemText>
           </ListItem>
+          </StyledLink>
+          
+          <StyledLink to="/restricted">
           <ListItem button>
-            <ListItemIcon><ErrorOutlineIcon /></ListItemIcon>
+            <ListItemIcon>
+              <ErrorOutlineIcon />
+            </ListItemIcon>
             <ListItemText>Restricted</ListItemText>
           </ListItem>
+          </StyledLink>
+
         </List>
       </Drawer>
     </div>

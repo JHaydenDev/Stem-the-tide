@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import NB from "../../Assets/General artwork/NB.jpg";
+import LilianaVess from "../../Assets/General artwork/Akroma-AngelofWrath.jpg";
 
 const Wrapper = styled.div`
   display: flex;
   height: 400px;
-  background-image: url("${NB}");
-  background-position: center;
-  background-size: cover;
+  background-image: url("${LilianaVess}");
   margin-top: 5.3%;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
 `;
 const HeaderBox = styled.div`
   background-color: rgba(0, 22, 46, 0.5);
