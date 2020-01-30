@@ -18,15 +18,51 @@ import ListItemText from "@material-ui/core/ListItemText";
 import HomeIcon from "@material-ui/icons/Home";
 import NotInterestedIcon from "@material-ui/icons/NotInterested";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
-import HelpIcon from '@material-ui/icons/Help';
-import LineWeightIcon from '@material-ui/icons/LineWeight';
+import HelpIcon from "@material-ui/icons/Help";
+import LineWeightIcon from "@material-ui/icons/LineWeight";
 
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+const LinkBox = styled.div`
+  display: flex;
+  width:20%;
+  justify-content: space-around;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width:100%;
+  }
+}
+`;
+
 const StyledLink = styled(Link)`
   color: black;
   text-decoration: none;
+`;
+
+const TopBarLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+`;
+
+const TopBarBox = styled.div`
+  display: flex;
+  width: 100%;
+  > h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+`;
+
+const DrawerBox = styled.div`
+@media (max-width: 900px) {
+  padding-top: 67px;
+}
 `;
 
 const drawerWidth = 240;
@@ -126,9 +162,15 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Stem The Tide
-          </Typography>
+          <TopBarBox>
+            <h2>
+              Stem The Tide
+              <LinkBox>
+                <TopBarLink to="/register">Register</TopBarLink>
+                <TopBarLink to="/login">Log in</TopBarLink>
+              </LinkBox>
+            </h2>
+          </TopBarBox>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -154,54 +196,54 @@ export default function MiniDrawer() {
             )}
           </IconButton>
         </div>
+        <DrawerBox>
+          <List>
+            <StyledLink to="/">
+              <ListItem button>
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText>Home</ListItemText>
+              </ListItem>
+            </StyledLink>
 
-        <List>
-          <StyledLink to="/">
-            <ListItem button>
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText>Home</ListItemText>
-            </ListItem>
-          </StyledLink>
+            <StyledLink to="/rules">
+              <ListItem button>
+                <ListItemIcon>
+                  <HelpIcon />
+                </ListItemIcon>
+                <ListItemText>Rules</ListItemText>
+              </ListItem>
+            </StyledLink>
 
-          <StyledLink to="/rules">
-            <ListItem button>
-              <ListItemIcon>
-                <HelpIcon />
-              </ListItemIcon>
-              <ListItemText>Rules</ListItemText>
-            </ListItem>
-          </StyledLink>
+            <StyledLink to="/banned">
+              <ListItem button>
+                <ListItemIcon>
+                  <NotInterestedIcon />
+                </ListItemIcon>
+                <ListItemText>Banned</ListItemText>
+              </ListItem>
+            </StyledLink>
 
-          <StyledLink to="/banned">
-          <ListItem button>
-            <ListItemIcon>
-              <NotInterestedIcon />
-            </ListItemIcon>
-            <ListItemText>Banned</ListItemText>
-          </ListItem>
-          </StyledLink>
-          
-          <StyledLink to="/restricted">
-          <ListItem button>
-            <ListItemIcon>
-              <ErrorOutlineIcon />
-            </ListItemIcon>
-            <ListItemText>Restricted</ListItemText>
-          </ListItem>
-          </StyledLink>
+            <StyledLink to="/restricted">
+              <ListItem button>
+                <ListItemIcon>
+                  <ErrorOutlineIcon />
+                </ListItemIcon>
+                <ListItemText>Restricted</ListItemText>
+              </ListItem>
+            </StyledLink>
 
-          <StyledLink to="/cardimg">
-          <ListItem button>
-            <ListItemIcon>
-              <LineWeightIcon />
-            </ListItemIcon>
-            <ListItemText>Card Search</ListItemText>
-          </ListItem>
-          </StyledLink>
-
-        </List>
+            <StyledLink to="/cardimg">
+              <ListItem button>
+                <ListItemIcon>
+                  <LineWeightIcon />
+                </ListItemIcon>
+                <ListItemText>Card Search</ListItemText>
+              </ListItem>
+            </StyledLink>
+          </List>
+        </DrawerBox>
       </Drawer>
     </div>
   );

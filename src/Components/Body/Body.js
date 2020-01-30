@@ -5,6 +5,8 @@ import Home from "./Home";
 import Banned from "./Banned";
 import Restricted from "./Restricted";
 import CardImg from "./Deckbuilder/CardImg";
+import Register from "./Authentication/Register"
+import Login from "./Authentication/Login"
 
 import { Route } from "react-router-dom";
 
@@ -17,7 +19,7 @@ const BodyBox = styled.div`
   display: flex;
   min-height: 400px;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto;
   width: 90%;
   > h1 {
     margin: auto;
@@ -38,6 +40,8 @@ function Body() {
           <Route path="/banned/" component={Banned} />
           <Route path="/restricted/" component={Restricted} />
           <Route path="/cardimg/" component={CardImg} />
+          <Route path="/register/" component={Register} />
+          <Route path="/Login/" component={Login} />
         </div>
       </BodyBox>
     </Wrapper>

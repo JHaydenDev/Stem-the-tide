@@ -6,7 +6,7 @@ const Wrapper = styled.div`
  
   min-height: 400px;
 `;
-const CardSearchBox = styled.div`
+const LoginBox = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -20,10 +20,10 @@ const CardSearchBox = styled.div`
   }
 `;
 
-function CardImg() {
+function Login() {
   return (
     <Wrapper>
-      <CardSearchBox>
+      <LoginBox>
         <h1>This is the Log in Component</h1>
         <p>
           Lorem Ipsum is the single greatest threat. We are not - we are not
@@ -42,9 +42,9 @@ function CardImg() {
           An ‘extremely credible source’ has called my office and told me that
           Barack Obama’s placeholder text is a fraud.
         </p>
-      </CardSearchBox>
+      </LoginBox>
     </Wrapper>
   );
 }
 
-export default CardImg;
+export default Login;

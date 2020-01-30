@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   display: flex;
- 
+
   min-height: 400px;
 `;
-const CardSearchBox = styled.div`
+const RegisterBox = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -20,11 +20,11 @@ const CardSearchBox = styled.div`
   }
 `;
 
-function CardImg() {
+function Register() {
   return (
     <Wrapper>
-      <CardSearchBox>
-        <h1>This is the Log in Component</h1>
+      <RegisterBox>
+        <h1>This is the Register Component</h1>
         <p>
           Lorem Ipsum is the single greatest threat. We are not - we are not
           keeping up with other websites. Lorem Ipsum best not make any more
@@ -42,9 +42,9 @@ function CardImg() {
           An ‘extremely credible source’ has called my office and told me that
           Barack Obama’s placeholder text is a fraud.
         </p>
-      </CardSearchBox>
+      </RegisterBox>
     </Wrapper>
   );
 }
 
-export default CardImg;
+export default Register;
