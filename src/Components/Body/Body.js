@@ -4,7 +4,7 @@ import Rules from "./Rules";
 import Home from "./Home";
 import Banned from "./Banned";
 import Restricted from "./Restricted";
-import CardImg from "./Deckbuilder/CardImg";
+import CardList from "./Deckbuilder/CardList";
 import Register from "./Authentication/Register"
 import Login from "./Authentication/Login"
 
@@ -39,7 +39,7 @@ function Body() {
           <Route path="/rules/" component={Rules} />
           <Route path="/banned/" component={Banned} />
           <Route path="/restricted/" component={Restricted} />
-          <Route path="/cardimg/" component={CardImg} />
+          <Route path="/cardlist/" component={CardList} />
           <Route path="/register/" component={Register} />
           <Route path="/Login/" component={Login} />
         </div>

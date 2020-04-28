@@ -234,7 +234,7 @@ export default function MiniDrawer() {
               </ListItem>
             </StyledLink>
 
-            <StyledLink to="/cardimg">
+            <StyledLink to="/cardlist">
               <ListItem button>
                 <ListItemIcon>
                   <LineWeightIcon />

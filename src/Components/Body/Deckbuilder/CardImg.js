@@ -24,7 +24,7 @@ function CardImg() {
   return (
     <Wrapper>
       <CardSearchBox>
-        <h1>This is the Log in Component</h1>
+        <h1>This is the Card Image Component</h1>
         <p>
           Lorem Ipsum is the single greatest threat. We are not - we are not
           keeping up with other websites. Lorem Ipsum best not make any more
